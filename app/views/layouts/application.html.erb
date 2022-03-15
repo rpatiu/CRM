@@ -12,9 +12,11 @@
   </head>
 
   <body>
+  <div class="m-5">
     <p><%= link_to 'Customers', customers_path %></p>
     <p><%= link_to 'Customers alphabetized', customers_alphabetized_path %></p>
     <p><%= link_to 'Customers with missing emails', customers_missing_email_path %></p>
+  </div>
     <%= yield %>
   </body>
 </html>

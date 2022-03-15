@@ -1,26 +1,26 @@
 <div class="column">
-  <div class="card">
-<% if customer.image.present? %>
-    <div class="card-image">
-      <figure class="imagem">
-        <%= image_tag customer.image, alt:"customer" %>
-      </figure>
-    </div>
-  <% end %>
+  <div class="card is-one-fourth pl-5 pr-5">
+
     <div class="card-content">
-      <p class="title">
+      <p class="title is-5">
           <%= customer.name %>
       </p>
     </div>
-    <footer class="card-footer">
-      <p class="card-footer-item">
-        Phone: <br><%= customer.phone %>
+    <% if customer.image.present? %>
+      <div class="card-image is-centered">
+        <figure class="imagem">
+          <%= image_tag customer.image, alt:"customer", width:"200" %>
+        </figure>
+      </div>
+    <% end %>
+      <p class="p-3">
+        <%= customer.phone %>
       </p>
-      <p class="card-footer-item">
-        Email: <br><%= customer.email %>
+      <p class="p-3">
+        <%= customer.email %>
       </p>
-      <p class="card-footer-item">
-        Notes: <br><%= customer.notes %>
+      <p class="p-3 pb-5">
+        <strong>Notes: </strong><%= customer.notes %>
       </p>
     </footer>
   </div>

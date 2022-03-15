@@ -1,4 +1,6 @@
-<div class="search-results columns is-multiline">
+<p class="title is-3 m-6">All Customers in alphabetical order</p>
+
+<div class="search-results columns is-multiline  m-6">
   <%= render partial: 'customers/customer',
              collection: @customers,
              locals: { show_link: true } %>
